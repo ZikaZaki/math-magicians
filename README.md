@@ -2,7 +2,7 @@
 
 # Math Magicians
 
-> This is project is part of Microverse **React** curriculum called the **Math Magicians** application. This application we be developed using the **React** framework. 
+> This is project is part of Microverse **React** curriculum called the **Math Magicians** application. This application will be developed using the **React** framework. 
 
 ## Built With ⚙️
 
