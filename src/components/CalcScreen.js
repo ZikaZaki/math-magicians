@@ -1,19 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Textfit } from 'react-textfit';
+import { CalcContext } from '../context/CalcContext';
 
 class CalcScreen extends React.PureComponent {
   render() {
-    const { value } = this.props;
+    const { calc } = this.context;
     return (
-      <div className="calcScreen">
-        {value}
-      </div>
+      <Textfit className="calcScreen" max={50} mode="single">
+          {calc.num ? calc.num : calc.res}
+      </Textfit>
     );
   }
 }
 
-CalcScreen.propTypes = {
-  value: PropTypes.string.isRequired,
-};
+// We need to set the contextType to access the class (this.context) object
+CalcScreen.contextType = CalcContext;
 
 export default CalcScreen;
