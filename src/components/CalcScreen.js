@@ -7,7 +7,7 @@ class CalcScreen extends React.PureComponent {
     const { calc } = this.context;
     return (
       <Textfit className="calcScreen" max={50} mode="single">
-          {calc.num ? calc.num : calc.res}
+        {calc.num ? calc.num : calc.res}
       </Textfit>
     );
   }

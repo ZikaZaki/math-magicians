@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import { CalcContext } from '../context/CalcContext';
 
 class Button extends React.PureComponent {
-
   constructor(props) {
     super(props);
     this.state = {
       value: props.value,
     };
-    
+
     // When using ES6, we have to bind (this) to all event methods
     this.handleClick = this.handleClick.bind(this);
     this.acClick = this.acClick.bind(this);
@@ -45,13 +44,13 @@ class Button extends React.PureComponent {
       '+/-': this.plusMinusClick,
       '%': this.modClick,
       '.': this.commaClick,
-      x:  this.optClick,
+      x: this.optClick,
       '÷': this.optClick,
       '-': this.optClick,
       '+': this.optClick,
       '=': this.equalClick,
     };
-  
+
     return results[value] ? results[value]() : this.numClick();
   }
 
@@ -66,7 +65,7 @@ class Button extends React.PureComponent {
   }
 
   // User clicks plusMinus
-  plusMinusClick(){
+  plusMinusClick() {
     const { calc, setCalc } = this.context;
     setCalc({
       num: calc.num * -1,
@@ -80,7 +79,7 @@ class Button extends React.PureComponent {
     setCalc({
       num: (calc.num / 100),
       res: (calc.res / 100),
-      sign: ''
+      sign: '',
     });
   }
 
@@ -99,12 +98,10 @@ class Button extends React.PureComponent {
     const { calc, setCalc } = this.context;
     const { value } = this.state;
     let num = value;
-    console.log(typeof(value));
-    console.log(typeof(calc.num));
     num = (value === '0' && calc.num === 0) ? '0' : Number(`${calc.num}${value}`);
     setCalc({
       ...calc,
-      num: num,
+      num,
     });
   }
 
@@ -118,27 +115,27 @@ class Button extends React.PureComponent {
       res: calc.num,
     });
   }
-  
+
   // User clicks equal(=)
   equalClick() {
     const { calc, setCalc } = this.context;
-    if(calc.res && calc.num){
+    if (calc.res && calc.num) {
       const math = (a, b, sign) => {
         const result = {
           '%': (a, b) => a % b,
-          'x': (a, b) => a * b,
+          x: (a, b) => a * b,
           '÷': (a, b) => a / b,
           '+': (a, b) => a + b,
           '-': (a, b) => a - b,
-        }
+        };
         return result[sign](a, b);
-      }
+      };
 
       setCalc({
         res: math(calc.res, calc.num, calc.sign),
         sign: '',
         num: 0,
-      })
+      });
     }
   }
 
