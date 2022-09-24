@@ -8,7 +8,11 @@ class CalcScreen extends React.PureComponent {
 
     return (
       <Textfit className="calcScreen" max={50} mode="single">
-        {calc.total} {calc.operation} {calc.next}
+        {calc.total}
+        {' '}
+        {calc.operation}
+        {' '}
+        {calc.next}
       </Textfit>
     );
   }

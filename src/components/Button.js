@@ -39,7 +39,6 @@ class Button extends React.PureComponent {
     setCalc(calcResult);
   }
 
-
   render() {
     const { value } = this.state;
     return (
