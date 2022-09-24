@@ -5,7 +5,7 @@ import { CalcContext } from '../context/CalcContext';
 const CalcScreen = () => {
   const { calc } = useContext(CalcContext);
 
-  return(
+  return (
     <Textfit className="calcScreen" max={50} mode="single">
       {calc.total}
       {' '}
@@ -13,7 +13,7 @@ const CalcScreen = () => {
       {' '}
       {calc.next}
     </Textfit>
-  )
-}
+  );
+};
 
 export default CalcScreen;

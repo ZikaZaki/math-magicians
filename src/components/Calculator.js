@@ -27,6 +27,6 @@ const Calculator = () => {
       </CalcWrapper>
     </CalcProvider>
   );
-}
+};
 
 export default Calculator;
