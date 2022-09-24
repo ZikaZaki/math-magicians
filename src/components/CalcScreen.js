@@ -1,24 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Textfit } from 'react-textfit';
 import { CalcContext } from '../context/CalcContext';
 
-class CalcScreen extends React.PureComponent {
-  render() {
-    const { calc } = this.context;
+const CalcScreen = () => {
+  const { calc } = useContext(CalcContext);
 
-    return (
-      <Textfit className="calcScreen" max={50} mode="single">
-        {calc.total}
-        {' '}
-        {calc.operation}
-        {' '}
-        {calc.next}
-      </Textfit>
-    );
-  }
+  return(
+    <Textfit className="calcScreen" max={50} mode="single">
+      {calc.total}
+      {' '}
+      {calc.operation}
+      {' '}
+      {calc.next}
+    </Textfit>
+  )
 }
-
-// We need to set the contextType to access the class (this.context) object
-CalcScreen.contextType = CalcContext;
 
 export default CalcScreen;
