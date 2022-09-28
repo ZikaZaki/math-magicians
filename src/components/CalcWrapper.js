@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 
 const CalcWrapper = ({ children }) => (
   <div className="calcWrapper">
-    {children}
+    <h2 className="subtitle">Let's do some math!</h2>
+    <div className="calculator">
+      {children}
+    </div>
   </div>
 );
 
