@@ -1,14 +1,18 @@
-import React from "react";
+import React from 'react';
+import styles from './Quote.module.css';
 
-const Quote = () => {
-    return (
-        <div className="quote">
-            <h2 className="subtitle">
-                Mathematics is not about numbers, equations, computations, or algorithms:
-                it is about understanding. –William Paul Thurston
-             </h2>
-        </div>
-    );
-}
- 
+const Quote = () => (
+  <div className={styles.quote}>
+    <h2 className={styles.subtitle}>
+      <strong>&ldquo; </strong>
+      Mathematics is not about numbers, equations, computations,
+      or algorithms: it is about understanding.
+      <strong> &bdquo;</strong>
+    </h2>
+    <span className={styles.author}>
+      Author: William Paul Thurston
+    </span>
+  </div>
+);
+
 export default Quote;

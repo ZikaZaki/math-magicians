@@ -4,23 +4,18 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Calculator from './components/Calculator';
 import Quote from './components/Quote';
+import styles from './App.module.css';
 
 function App() {
   return (
     <Router>
-      <div className="wrapper">
+      <div className={styles.wrapper}>
         <Navbar />
-        <div className="content">
+        <div className={styles.content}>
           <Routes>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/calculator">
-              <Calculator />
-            </Route>
-            <Route path="/quote">
-              <Quote />
-            </Route>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/calculator" element={<Calculator />} />
+            <Route exact path="/quote" element={<Quote />} />
           </Routes>
         </div>
       </div>
