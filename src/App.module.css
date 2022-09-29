@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fafafa;
+  height: 100vh;
+  min-width: 100vw;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #4f5b66;
+  color: white;
+  font-size: calc(10px + 2vmin);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  margin: 0;
+}
