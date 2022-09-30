@@ -12,11 +12,11 @@
 - **Technologies used**: NPM, Webpack, & Jest Library.
 - **Tools**: Git, Gitflow, GitHub, VS Code, & Chrome Browser.
 
-## Live Demo (Not Available Yet) 🚀
+## Live Demo (Deployed with Netlify) 🚀
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blueviolet)](https://livedemo.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/68ea255b-ae38-4005-968b-6fbd0a8d676b/deploy-status)](https://app.netlify.com/sites/fabulous-crumble-e3ff47/deploys)
 
-[Live Demo Link](https://zikazaki.github.io/math-magicians/)
+[Live Demo Link](https://fabulous-crumble-e3ff47.netlify.app/)
 
 ## Getting Started
 
